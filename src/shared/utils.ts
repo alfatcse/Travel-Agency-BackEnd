@@ -14,7 +14,6 @@ export const hashPassword = async (password: string): Promise<string> => {
     password,
     Number(config.bcrypt_salt_rounds)
   );
-  console.log(HashedPassword);
   return HashedPassword;
 };
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
