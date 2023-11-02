@@ -53,7 +53,7 @@ CREATE TABLE "TravelDestinations" (
     "price" INTEGER NOT NULL,
     "destination" TEXT NOT NULL,
     "title" TEXT NOT NULL,
-    "ratting" INTEGER NOT NULL DEFAULT 0,
+    "ratting" DOUBLE PRECISION NOT NULL DEFAULT 0,
     "Status" "CurrentStatus" NOT NULL DEFAULT 'Available',
     "adminId" TEXT NOT NULL,
     "seat" INTEGER NOT NULL,

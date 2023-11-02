@@ -62,7 +62,7 @@ model TravelDestinations {
   price       Int
   destination String        @unique
   title       String
-  ratting     Int           @default(0)
+  ratting     Float         @default(0)
   Status      CurrentStatus @default(Available)
   adminId     String
   Admin       Admin?        @relation(fields: [adminId], references: [id])
