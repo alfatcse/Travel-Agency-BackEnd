@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -21,6 +18,8 @@ model User {
   adminId      String?
   createdAt    DateTime  @default(now())
   updatedAt    DateTime  @updatedAt
+  Booking      Booking[]
+  Reviews      Reviews[]
 
   @@map("user")
 }
@@ -38,13 +37,14 @@ model Customer {
 }
 
 model Admin {
-  id        String   @id @default(uuid())
-  email     String   @unique
-  name      String   @unique
-  contactNo String   @unique
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  User      User[]
+  id                 String               @id @default(uuid())
+  email              String               @unique
+  name               String               @unique
+  contactNo          String               @unique
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @updatedAt
+  User               User[]
+  TravelDestinations TravelDestinations[]
 
   @@map("admin")
 }
@@ -53,4 +53,59 @@ enum UserType {
   admin
   customer
   super_admin
+}
+
+model TravelDestinations {
+  id          String        @id @default(uuid())
+  image       String
+  time        String        @unique
+  price       Int
+  destination String        @unique
+  title       String
+  ratting     Int           @default(0)
+  Status      CurrentStatus @default(Available)
+  adminId     String
+  Admin       Admin?        @relation(fields: [adminId], references: [id])
+  seat        Int
+  description String
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  Booking     Booking[]
+  Reviews     Reviews[]
+}
+
+enum CurrentStatus {
+  Available
+  Sold_Out
+}
+
+model Booking {
+  id                  String             @id @default(uuid())
+  UserId              String
+  User                User               @relation(fields: [UserId], references: [id])
+  TravelDestinationId String
+  TravelDestination   TravelDestinations @relation(fields: [TravelDestinationId], references: [id])
+  Number_Traveler     Int
+  BookingStatus       BookingStatus      @default(Booked)
+  createdAt           DateTime           @default(now())
+  updatedAt           DateTime           @updatedAt
+}
+
+enum BookingStatus {
+  Booked
+  Confirmed
+  Rejected
+  Canceled
+}
+
+model Reviews {
+  id                  String             @id @default(uuid())
+  Ratting             Int
+  Comment             String
+  UserId              String
+  User                User               @relation(fields: [UserId], references: [id])
+  TravelDestinationId String
+  TravelDestination   TravelDestinations @relation(fields: [TravelDestinationId], references: [id])
+  createdAt           DateTime           @default(now())
+  updatedAt           DateTime           @updatedAt
 }

@@ -44,6 +44,21 @@
             "date": 1698923305958,
             "name": "/Users/apple/Desktop/Programming/Lavel2/Assignment9/Travel-Agency-BackEnd/logs/winston/successes/phu-2023-02-11-12-success.log",
             "hash": "62df6d0b7a225711817de9856d31ca45b402e26ee4df295bdce03341ec613901"
+        },
+        {
+            "date": 1698930483822,
+            "name": "/Users/apple/Desktop/Programming/Lavel2/Assignment9/Travel-Agency-BackEnd/logs/winston/successes/phu-2023-02-11-14-success.log",
+            "hash": "f811a24c0beea1fea2a54feb50ea8e0594af2432da2beee7415febd12423d498"
+        },
+        {
+            "date": 1698947211348,
+            "name": "/Users/apple/Desktop/Programming/Lavel2/Assignment9/Travel-Agency-BackEnd/logs/winston/successes/phu-2023-02-11-18-success.log",
+            "hash": "4d86153464a890b7855fec6ed89eedeb87322b3994e433dfe45c0fdb00bebf87"
+        },
+        {
+            "date": 1698948026543,
+            "name": "/Users/apple/Desktop/Programming/Lavel2/Assignment9/Travel-Agency-BackEnd/logs/winston/successes/phu-2023-02-11-19-success.log",
+            "hash": "8536a062f114b0828762d0a485cebff76366a291a2e4ae7f900d05bf43396b5d"
         }
     ],
     "hashType": "sha256"
