@@ -1,4 +1,7 @@
 import { Booking } from "@prisma/client";
+import { paginationHelpers } from "../../../helpers/paginationHelper";
+import { IGenericResponse } from "../../../interfaces/common";
+import { IPaginationOptions } from "../../../interfaces/pagination";
 import prisma from "../../../shared/prisma";
 import { IBookingData } from "./booking.interface";
 const insertIntoDB = async (
@@ -43,9 +46,37 @@ const insertIntoDB = async (
       return result;
     }
   });
-
   return result;
+};
+const getAllBooking = async (
+  options: IPaginationOptions
+): Promise<IGenericResponse<Booking[]>> => {
+  const { limit, page, skip } = paginationHelpers.calculatePagination(options);
+  const result = await prisma.booking.findMany({
+    where: {},
+    include: { User: true, TravelDestination: true },
+    skip,
+    take: limit,
+    orderBy:
+      options.sortBy && options.sortOrder
+        ? { [options.sortBy]: options.sortOrder }
+        : {
+            createdAt: "desc",
+          },
+  });
+  const total = await prisma.booking.count({
+    where: {},
+  });
+  return {
+    meta: {
+      total,
+      page,
+      limit,
+    },
+    data: result,
+  };
 };
 export const BookingService = {
   insertIntoDB,
+  getAllBooking,
 };
