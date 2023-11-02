@@ -1,0 +1,40 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/apple/Desktop/Programming/Lavel2/Assignment9/Travel-Agency-BackEnd/logs/winston/errors/.d9b27f330078dcb52bf1d38c072ed6ca06d69717-audit.json",
+    "files": [
+        {
+            "date": 1698869853637,
+            "name": "/Users/apple/Desktop/Programming/Lavel2/Assignment9/Travel-Agency-BackEnd/logs/winston/errors/phu-2023-01-11-21-error.log",
+            "hash": "03dcc7cf0e644e8dad44157a143b4de8bbfc5107a85473f1d400dc601330c22e"
+        },
+        {
+            "date": 1698872414913,
+            "name": "/Users/apple/Desktop/Programming/Lavel2/Assignment9/Travel-Agency-BackEnd/logs/winston/errors/phu-2023-01-11-22-error.log",
+            "hash": "180b81c33637012dd4f573302624a638e29a9e08c10445cda90a42600183378d"
+        },
+        {
+            "date": 1698878768211,
+            "name": "/Users/apple/Desktop/Programming/Lavel2/Assignment9/Travel-Agency-BackEnd/logs/winston/errors/phu-2023-01-11-23-error.log",
+            "hash": "dde62e4757f08ae2a2c8676247639c5c579b224710cca393783d028afc8aedd3"
+        },
+        {
+            "date": 1698880217585,
+            "name": "/Users/apple/Desktop/Programming/Lavel2/Assignment9/Travel-Agency-BackEnd/logs/winston/errors/phu-2023-02-11-00-error.log",
+            "hash": "0305df235377a28e65de91872a349bc6dd2cd7ea87baff4011cb39de7d4baf4f"
+        },
+        {
+            "date": 1698883331921,
+            "name": "/Users/apple/Desktop/Programming/Lavel2/Assignment9/Travel-Agency-BackEnd/logs/winston/errors/phu-2023-02-11-01-error.log",
+            "hash": "a9822b48fc3f5745584ab4e49fff95b8734ed15a598def933739d1ee6b1307fd"
+        },
+        {
+            "date": 1698886962821,
+            "name": "/Users/apple/Desktop/Programming/Lavel2/Assignment9/Travel-Agency-BackEnd/logs/winston/errors/phu-2023-02-11-02-error.log",
+            "hash": "e9fcb8236b33d8a6f0e372ad97947960847ddbb316e034c01dc10cb58a3d6c94"
+        }
+    ],
+    "hashType": "sha256"
+}
