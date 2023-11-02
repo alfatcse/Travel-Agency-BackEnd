@@ -8,4 +8,6 @@ router.post(
   validateRequest(UserValidation.create),
   UserController.insertIntoDB
 );
+router.get("/allCustomer", UserController.getAllCustomer);
+router.get("/getAllAdmin", UserController.getAdmin);
 export const userRouter = router;

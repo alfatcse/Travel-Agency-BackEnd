@@ -8,3 +8,8 @@ export type IUserData = {
   contactNo: string;
   userType?: UserType;
 };
+export type IUserFilterRequest = {
+  searchTerm?: string | undefined;
+  email?: string | undefined;
+  name?: string | undefined;
+};
